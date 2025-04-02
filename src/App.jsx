@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
+import { createHashRouter, RouterProvider, Navigate } from "react-router-dom";
 
 import { ThemeProvider } from "@/contexts/theme-context";
 
@@ -18,7 +18,7 @@ import PaymentPage from "./routes/payment/page";
 import UpdateProfilePage from "./routes/updateProfile/page";
 
 function App() {
-    const router = createBrowserRouter([
+    const router = createHashRouter([
         {
             path: "/",
             element: (
@@ -27,44 +27,17 @@ function App() {
                 </ProtectedRoute>
             ),
             children: [
-                {
-                    index: true,
-                    element: <DashboardPage />,
-                },
-                {
-                    path: "transactions",
-                    element: <TransactionPage />,
-                },
-                {
-                    path: "affiliates",
-                    element: <AffiliatePage />,
-                },
-                {
-                    path: "affiliates-upgrade",
-                    element: <AffiliateUpgradePage />,
-                },
-                {
-                    path: "support",
-                    element: <SupportPage />,
-                },
-                {
-                    path: "payments",
-                    element: <PaymentPage />,
-                },
+                { index: true, element: <DashboardPage /> },
+                { path: "transactions", element: <TransactionPage /> },
+                { path: "affiliates", element: <AffiliatePage /> },
+                { path: "affiliates-upgrade", element: <AffiliateUpgradePage /> },
+                { path: "support", element: <SupportPage /> },
+                { path: "payments", element: <PaymentPage /> },
             ],
         },
-        {
-            path: "/signin",
-            element: <SigninPage />,
-        },
-        {
-            path: "/signup",
-            element: <SignupPage />,
-        },
-        {
-            path: "/contact-vendor",
-            element: <ContactVendorPage />,
-        },
+        { path: "/signin", element: <SigninPage /> },
+        { path: "/signup", element: <SignupPage /> },
+        { path: "/contact-vendor", element: <ContactVendorPage /> },
         {
             path: "/profile",
             element: (
