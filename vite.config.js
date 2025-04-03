@@ -6,12 +6,6 @@ import path from "path";
 export default defineConfig({
     plugins: [react()],
     base: "/foodie_frontend/", // Ensure this matches your GitHub repo name
-    build: {
-        outDir: "dist",
-        rollupOptions: {
-            input: "index.html",
-        },
-    },
     server: {
         port: 3000,
     },
