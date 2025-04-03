@@ -1,9 +1,9 @@
 import { createHashRouter, RouterProvider, Navigate } from "react-router-dom";
 
-import { ThemeProvider } from "@/contexts/theme-context";
+import { ThemeProvider } from "./contexts/theme-context";
 
-import Layout from "@/routes/layout";
-import DashboardPage from "@/routes/dashboard/page";
+import Layout from "./routes/layout";
+import DashboardPage from "./routes/dashboard/page";
 import SigninPage from "./routes/signin/page";
 import SignupPage from "./routes/signup/page";
 
